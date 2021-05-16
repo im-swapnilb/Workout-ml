@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Workout Model
+</title>
+<style>
+body {
+font-family: Calibri, Helvetica, sans-serif;
+background-color: grey;
+}
+.container {
+padding: 50px;
+background-color: lightblue;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+ border: none;
+ background: #f1f1f1;
+}
+input[type=number]:focus {
+background-color: lightgrey;
+outline: none;
+}
+ div {
+            padding: 10px 0;
+        }
+
+button {
+  color: blue;
+  padding: 16px 20px;  
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  opacity: 0.9;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<center>  
+<h1> Fitness Check</h1> 
+<img src="https://www.agrarzeitung.de/gallery/media/101/1917-detailp.jpeg" alt="Fitness Check" width="300" height="150">
+</center>
+<div>
+<form action="/result" method="POST">
+Gender :
+</label><br>
+<input type="radio" value="Male" name="gender" checked > Male 
+<input type="radio" value="Female" name="gender"> Female
+</div>
+<label> Height (Please enter in inches, 1ft = 12 inches): </label> 
+<input type="number" step="0.01" name="height" min="10" max="999" size="15" required/> 
+<label> Weight (Please enter in Lbs, 1kg = 2.2lbs): </label> 
+<input type="number" step="0.01" name="weight" min="5" max="999" size="15" required/> 
+
+<button type="submit" value="submit" size="15"> Submit</button>
+</form>
+</body>
+</html>
